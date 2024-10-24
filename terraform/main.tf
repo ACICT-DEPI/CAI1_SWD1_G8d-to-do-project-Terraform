@@ -1,7 +1,7 @@
 provider "aws" {
-  region     = var.region
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  region     = var.region     # put your region
+  access_key = var.aws_access_key     # never share the credentials even on a private repo 
+  secret_key = var.aws_secret_key      # never share the credentials even on a private repo 
 }
 provider "kubernetes" {
   host                   = data.aws_eks_cluster.cluster.endpoint
